@@ -17,6 +17,10 @@ class MercadoPagoController {
             })
         }
     }
+
+    async mensagemSucesso(req: Request, res: Response){ 
+        res.json({ message: "Deu certo!" })
+    }
 }
 
 export default new MercadoPagoController()
