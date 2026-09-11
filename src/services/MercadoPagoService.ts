@@ -19,21 +19,11 @@ export default class MercadoPagoService {
                         currency_id: "BRL"
                     }
                 ],
-                // payment_methods: {
-                //     installments: 1
-                // }
             }
         })
         return {
             id: resultado.id,
             link: resultado.init_point
         }
-    }
-
-    async buscarMensalidadePaga(codigoMensalidadeMercadoPago: number) {
-        const payment = new Payment(mercadoPagoConfig)
-        return await payment.get({
-            id: codigoMensalidadeMercadoPago
-        })
     }
 }
